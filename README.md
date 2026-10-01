@@ -22,7 +22,7 @@
 
 ---
 
-### 📈 3. AI Assistant & Automated Reorder Pipeline
+### 📈 2. AI Assistant & Automated Reorder Pipeline
 *Automated purchase order tracking, supplier integrations, and AI safety stock recommendations.*
 
 ![StockSmart Analytics & AI Pipeline](docs/screenshots/analytics_reports.jpg)
