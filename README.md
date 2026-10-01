@@ -1,12 +1,21 @@
 # 🌿 StockSmart: Retail Inventory Optimization System
 
 [![Fullstack CI/CD Pipeline](https://github.com/ShreyaSharma0412/StockSmart/actions/workflows/ci.yml/badge.svg)](https://github.com/ShreyaSharma0412/StockSmart/actions/workflows/ci.yml)
+[![Presentation](https://img.shields.io/badge/Google%20Slides-Project%20Presentation-yellow.svg?logo=google-slides)](https://docs.google.com/presentation/d/1HEO77hY3wFDZ1yafZN74y_iMZAsaPcov/edit?usp=sharing&ouid=111506100153704864995&rtpof=true&sd=true)
 ![Java](https://img.shields.io/badge/Java-17-orange.svg)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.1-brightgreen.svg)
 ![Angular](https://img.shields.io/badge/Angular-19.1.0-red.svg)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
 **StockSmart** is a fullstack retail inventory management application built with **Spring Boot 3** and **Angular 19**. It features real-time stock tracking, an AI reorder pipeline, interactive movement analytics, barcode/RFID hardware simulation, and automated reporting — all served under a single unified local URL.
+
+---
+
+## 📽️ Project Presentation
+
+Check out our complete project presentation deck covering system architecture, UX design system, AI safety stock pipeline, and retail inventory features:
+
+👉 **[View StockSmart Google Slides Presentation](https://docs.google.com/presentation/d/1HEO77hY3wFDZ1yafZN74y_iMZAsaPcov/edit?usp=sharing&ouid=111506100153704864995&rtpof=true&sd=true)**
 
 ---
 
