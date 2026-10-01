@@ -19,10 +19,6 @@
 
 ---
 
-### 📦 2. Retail Inventory Management & Real-Time Stock Control
-*Searchable catalog featuring actual market pricing, high-contrast action controls, barcode/RFID identifiers, and AI safety stock alerts.*
-
-![StockSmart Inventory Management](docs/screenshots/inventory_management.jpg)
 
 ---
 
