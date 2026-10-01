@@ -1,0 +1,54 @@
+name: StockSmart Fullstack CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    name: Build & Validate Fullstack App
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install Frontend Dependencies & Build Angular SPA
+        run: |
+          cd frontend
+          npm ci
+          npm run build
+
+      - name: Copy Angular Build to Spring Boot Static Folder
+        run: |
+          mkdir -p src/main/resources/static
+          rm -rf src/main/resources/static/*
+          cp -r frontend/dist/frontend/browser/* src/main/resources/static/
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Make Maven Wrapper Executable
+        run: chmod +x mvnw
+
+      - name: Build Spring Boot Application JAR
+        run: ./mvnw clean package -DskipTests
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: stocksmart-application
+          path: target/*.jar
